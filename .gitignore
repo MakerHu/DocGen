@@ -53,3 +53,6 @@ temp/
 # 数据库相关
 *.sqlite
 *.db
+
+# 运行时输出文件
+outputs/

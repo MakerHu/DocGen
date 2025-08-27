@@ -4,6 +4,8 @@ const path = require('path');
 const fs = require('fs');
 const docService = require('../services/docService');
 const agentService = require('../services/agentService');
+    
+const FILE_PATH = path.join(process.cwd(), "outputs");
 
 router.post('/gen', async (req, res) => {
     docService.genDoc(req.body.keywords)
@@ -29,7 +31,7 @@ router.post('/genFlowChart', async (req, res) => {
 
 router.get('/download', (req, res) => {
     let filename = req.query.filename
-    const filePath = path.join(process.cwd(), 'files', filename);
+    let filePath = path.join(FILE_PATH, filename);
 
     // 设置响应头
     res.setHeader('Content-disposition', 'attachment; filename=' + filename);
