@@ -59,5 +59,5 @@ curl http://localhost:3000/api/llm/chat \
 
 ## 输出
 
-- 生成的提纲：files/outline.json
-- 生成的文档：files/output.md
+- 生成的提纲：outputs/outline.json
+- 生成的文档：outputs/output.md
